@@ -1,0 +1,28 @@
+<h1 class="display-1">Cars List</h1>
+{{#if delId}}
+    <div class="alert alert-danger" role="alert">Car with id = {{delId}} has been deleted from base</div>
+{{/if}}
+<form>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">_id</th>
+                <th scope="col">Insurance</th>
+                <th scope="col">Gasoline</th>
+                <th scope="col">Damaged</th>
+                <th scope="col">Drive 4x4</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+                {{> car}}
+            {{/each}}
+        </tbody>
+    </table>
+</form>
+
+
+
+
+

@@ -1,0 +1,29 @@
+<h1 class="display-1">Edit/Update Car</h1>
+{{#if updateId}}
+    <div class="alert alert-warning" role="alert">Car with id = {{updateId}} has been edited</div>
+{{/if}}
+
+<form>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">_id</th>
+                <th scope="col">Insurance</th>
+                <th scope="col">Gasoline</th>
+                <th scope="col">Damaged</th>
+                <th scope="col">Drive 4x4</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+                {{> editCar}}
+            {{/each}}
+        </tbody>
+    </table>
+</form>
+
+
+
+
+

@@ -1,0 +1,68 @@
+<tr>
+    <th scope="row">{{this._id}}</th>
+    {{#if this.selected}}
+
+        <td>
+            <select name="insurance" >
+                <option value="TAK">TAK</option>
+                <option value="NIE">NIE</option>
+                <option value="BRAKDANYCH">BRAKDANYCH</option>
+            </select>
+        </td>
+        <td>
+            <select name="gasoline" >
+                <option value="TAK">TAK</option>
+                <option value="NIE">NIE</option>
+                <option value="BRAKDANYCH">BRAKDANYCH</option>
+            </select>
+        </td>
+        <td>            
+            <select name="damaged" >
+                <option value="TAK">TAK</option>
+                <option value="NIE">NIE</option>
+                <option value="BRAKDANYCH">BRAKDANYCH</option>
+            </select>
+        </td>
+        <td>
+            <select name="drive" >
+                <option value="TAK">TAK</option>
+                <option value="NIE">NIE</option>
+                <option value="BRAKDANYCH">BRAKDANYCH</option>
+            </select>
+        </td>
+        <td>
+            <button 
+                type="submit" 
+                class="btn btn-warning" 
+                name="updateId" 
+                value="{{this._id}}"
+                formaction="/edit" 
+                formmethod="post"
+                onclick="return confirm('Are you sure you want to edit this car?')"
+                >Update</button>
+            <button 
+                type="submit" 
+                class="btn btn-danger" 
+                name="cancel" 
+                value="true" 
+                formaction="/edit"
+                formmethod="get"
+                >Cancel</button>
+        </td>
+    {{else}}
+    <td>{{this.insurance}}</td>
+    <td>{{this.gasoline}}</td>
+    <td>{{this.damaged}}</td>
+    <td>{{this.drive}}</td>
+    <td>
+        <button 
+            type="submit" 
+            class="btn btn-warning" 
+            name="id" 
+            value="{{this._id}}" 
+            formaction="/edit" 
+            formmethod="get"
+            >Edit</button>
+    </td>
+    {{/if}}
+</tr>

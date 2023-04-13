@@ -1,0 +1,18 @@
+<tr>
+    <th scope="row">{{this._id}}</th>
+    <td>{{this.insurance}}</td>
+    <td>{{this.gasoline}}</td>
+    <td>{{this.damaged}}</td>
+    <td>{{this.drive}}</td>
+    <td>
+        <button 
+            type="submit" 
+            class="btn btn-danger" 
+            name="id" 
+            value="{{this._id}}" 
+            formaction="/show"
+            formmethod="post"
+            onclick="return confirm('Are you sure you want to delete this car?')"
+            >Delete</button>
+    </td>
+</tr>
