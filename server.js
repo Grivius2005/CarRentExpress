@@ -5,6 +5,7 @@ const hbs = require("express-handlebars")
 const Datastore = require("nedb")
 const bodyParser = require('body-parser')
 const path = require("path")
+const { Console } = require("console")
 
 
 const dataBase = new Datastore({
@@ -18,6 +19,9 @@ app.engine("hbs",hbs({
     defaultLayout: 'main.hbs',
     extname: '.hbs',
     partialsDir: "views/partials",
+    helpers: {
+        checkSelect: (value, check) => value == check ? "selected" : ""
+    }
 }))
 app.set("view engine","hbs")
 app.use(bodyParser.urlencoded({extended:true}))
