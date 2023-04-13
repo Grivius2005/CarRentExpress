@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const hbs = require("express-handlebars")
 const Datastore = require("nedb")
 const bodyParser = require('body-parser')
@@ -104,5 +104,5 @@ app.post("/edit",(req,res)=>
 app.use(express.static("static"))
 app.listen(PORT,()=>
 {
-    console.log("Server działa!")
+    console.log(`Server działa na porcie ${PORT}!`)
 })
