@@ -38,10 +38,10 @@ app.get("/add",(req,res)=>{
 
 app.post("/add",(req,res)=>{
     const doc = {
-        insurance: req.body.insurance != undefined ? "TAK" : "NIE",
-        gasoline: req.body.gasoline != undefined ? "TAK" : "NIE",
-        damaged: req.body.damaged != undefined ? "TAK" : "NIE",
-        drive: req.body.drive != undefined ? "TAK" : "NIE"
+        insurance: req.body.insurance != undefined ? "YES" : "NO",
+        gasoline: req.body.gasoline != undefined ? "YES" : "NO",
+        damaged: req.body.damaged != undefined ? "YES" : "NO",
+        drive: req.body.drive != undefined ? "YES" : "NO"
     }
 
     dataBase.insert(doc, (err, newDoc) => {
@@ -104,5 +104,5 @@ app.post("/edit",(req,res)=>
 app.use(express.static("static"))
 app.listen(PORT,()=>
 {
-    console.log(`Server działa na porcie ${PORT}!`)
+    console.log(`Server works on port: ${PORT}!`)
 })
