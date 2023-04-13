@@ -1,3 +1,3 @@
 # App URL
 
-<https://grivius2005-express-car-rent.onrender.com>
+<https://grivius2005-cars-express.onrender.com>
