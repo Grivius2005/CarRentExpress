@@ -1,6 +1,6 @@
 # Description
 
-School project app for learning express with handlebars and no-sql databases.
+School project web app for learning express with handlebars and no-sql databases.
 
 # App URL
 
